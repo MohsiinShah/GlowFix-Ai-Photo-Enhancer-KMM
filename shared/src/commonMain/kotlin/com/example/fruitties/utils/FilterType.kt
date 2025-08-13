@@ -1,0 +1,6 @@
+package com.example.fruitties.utils
+
+enum class FilterType {
+    VINTAGE, LOMO, CLARENDON, VALENCIA, AMARO, GINGHAM, JUNO, MOON, NASHVILLE, XPROII,
+    LOFI, TOASTER, HUDSON, PERPETUA, MAYFAIR, RESET
+}

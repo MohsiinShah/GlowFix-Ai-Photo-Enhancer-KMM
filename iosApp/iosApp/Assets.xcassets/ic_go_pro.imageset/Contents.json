@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_go_pro.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

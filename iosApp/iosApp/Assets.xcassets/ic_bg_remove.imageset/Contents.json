@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ic_bg_remove.pdf",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
