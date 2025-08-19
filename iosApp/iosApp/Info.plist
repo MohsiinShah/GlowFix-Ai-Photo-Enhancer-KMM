@@ -28,12 +28,14 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
-			<key>bg-pro.niamtechnologies.com</key>
-			<dict/>
-			<key>NSIncludesSubdomains</key>
-			<true/>
 			<key>NSExceptionAllowsInsecureHTTPLoads</key>
 			<true/>
+			<key>NSIncludesSubdomains</key>
+			<true/>
+			<key>api</key>
+			<string></string>
+			<key>bg-pro.niamtechnologies.com</key>
+			<dict/>
 			<key>pe-pro.niamtechnologies.com</key>
 			<dict>
 				<key>NSExceptionAllowsInsecureHTTPLoads</key>
@@ -41,10 +43,12 @@
 				<key>NSIncludesSubdomains</key>
 				<true/>
 			</dict>
-			<key>api</key>
-			<string></string>
 		</dict>
 	</dict>
+	<key>NSApplicationCrashOnExceptions</key>
+	<true/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>We need to save images to your gallery.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>This app needs access to your photo library to display your images.</string>
 	<key>UIAppFonts</key>
@@ -73,8 +77,6 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>We need to save images to your gallery.</string>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

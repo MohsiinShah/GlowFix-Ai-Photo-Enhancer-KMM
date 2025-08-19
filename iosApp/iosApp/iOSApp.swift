@@ -16,6 +16,7 @@
 
 import SwiftUI
 import shared
+import Firebase
 
 @main
 struct iOSApp: App {
@@ -26,6 +27,7 @@ struct iOSApp: App {
         self.appContainer = ObservableValueWrapper<AppContainer>(
             value: AppContainer(factory: Factory())
         )
+        FirebaseApp.configure()
     }
 
     var body: some Scene {

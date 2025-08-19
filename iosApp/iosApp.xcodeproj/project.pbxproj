@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0400946C2E37863C00BB8FD3 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0400946A2E37862400BB8FD3 /* Photos.framework */; };
 		040E4B8D2E448AA8005697A0 /* BackNavigationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040E4B8C2E448AA6005697A0 /* BackNavigationHandler.swift */; };
+		04400B112E548EE0002A7149 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 04400B102E548EE0002A7149 /* FirebaseAnalytics */; };
+		04400B132E548EE0002A7149 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 04400B122E548EE0002A7149 /* FirebaseCrashlytics */; };
+		04400B152E548EFF002A7149 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04400B142E548EFF002A7149 /* GoogleService-Info.plist */; };
 		04722F6F2E4B0F1C00783A5F /* NavigationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04722F6E2E4B0F1500783A5F /* NavigationCoordinator.swift */; };
 		04722F712E4B24DB00783A5F /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04722F702E4B24D700783A5F /* Destination.swift */; };
 		04A2E2AC2E34E60E00269172 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 04A2E2AB2E34E60E00269172 /* Lottie */; };
@@ -29,6 +32,7 @@
 /* Begin PBXFileReference section */
 		0400946A2E37862400BB8FD3 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		040E4B8C2E448AA6005697A0 /* BackNavigationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackNavigationHandler.swift; sourceTree = "<group>"; };
+		04400B142E548EFF002A7149 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04722F6E2E4B0F1500783A5F /* NavigationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationCoordinator.swift; sourceTree = "<group>"; };
 		04722F702E4B24D700783A5F /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		04A2E2B02E34F5CB00269172 /* poppins_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = poppins_bold.ttf; sourceTree = "<group>"; };
@@ -57,7 +61,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A2E2AC2E34E60E00269172 /* Lottie in Frameworks */,
+				04400B132E548EE0002A7149 /* FirebaseCrashlytics in Frameworks */,
 				0400946C2E37863C00BB8FD3 /* Photos.framework in Frameworks */,
+				04400B112E548EE0002A7149 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +108,7 @@
 				7555FF7D242A565900829871 /* iosApp */,
 				7555FF7C242A565900829871 /* Products */,
 				7555FFB0242A642200829871 /* Frameworks */,
+				04400B142E548EFF002A7149 /* GoogleService-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -148,6 +155,7 @@
 				7555FF77242A565900829871 /* Sources */,
 				7555FF78242A565900829871 /* Frameworks */,
 				7555FF79242A565900829871 /* Resources */,
+				04400B162E5490C3002A7149 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -188,6 +196,7 @@
 			mainGroup = 7555FF72242A565900829871;
 			packageReferences = (
 				04A2E2AA2E34E60E00269172 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				04400B0F2E548EE0002A7149 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
@@ -204,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				058557D9273AAEEB004C7B11 /* Preview Assets.xcassets in Resources */,
+				04400B152E548EFF002A7149 /* GoogleService-Info.plist in Resources */,
 				04A2E2B52E34F5CB00269172 /* poppins_bold.ttf in Resources */,
 				04A2E2B62E34F5CB00269172 /* poppins_light.ttf in Resources */,
 				04A2E2B72E34F5CB00269172 /* poppins_medium.ttf in Resources */,
@@ -216,6 +226,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		04400B162E5490C3002A7149 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
 		7555FFB5242A651A00829871 /* Compile Kotlin Multiplatform */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -395,7 +427,7 @@
 					"-framework",
 					shared,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amexhub.photo.ai;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pulsebyte.ai.photoenhancer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
@@ -422,7 +454,7 @@
 					"-framework",
 					shared,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amexhub.photo.ai;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pulsebyte.ai.photoenhancer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
@@ -454,6 +486,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		04400B0F2E548EE0002A7149 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.1.0;
+			};
+		};
 		04A2E2AA2E34E60E00269172 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
@@ -465,6 +505,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		04400B102E548EE0002A7149 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04400B0F2E548EE0002A7149 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		04400B122E548EE0002A7149 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 04400B0F2E548EE0002A7149 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
 		04A2E2AB2E34E60E00269172 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 04A2E2AA2E34E60E00269172 /* XCRemoteSwiftPackageReference "lottie-ios" */;
